@@ -7,7 +7,7 @@ Seran necesarios:
 
 clonamos el repositorio:
   
-  git clone https://github.com/Arassiel/TCIT-Challenge.git
+      git clone https://github.com/Arassiel/TCIT-Challenge.git
 
 luego abrimos la carpeta contenedora del projecto con el editor de codigo
 
@@ -35,4 +35,3 @@ con esto queda lista la base de datos y puede ser monitoreada por pgAdmin
 
     con esto ya deberia abrir el navegador con la app y deberia ser usable, revisar que los cambios sucedan en pgAdmin tambien.
 
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
