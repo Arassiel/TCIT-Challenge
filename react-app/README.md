@@ -1,72 +1,38 @@
-# Primero es necesario establecer la base de datos postgreSQL
+# Primero es necesario establecer los programas y ambientes a utilizar
+Seran necesarios:
+    node.js
+    visual studio code o algun editor de codigo
+    postgreSQL
+## Clonar repositorio y instalar paquetes
 
+clonamos el repositorio:
+  
+  git clone https://github.com/Arassiel/TCIT-Challenge.git
 
+luego abrimos la carpeta contenedora del projecto con el editor de codigo
 
+Usamos una terminal para ejecutar "npm install", esto se debe realizar en la carpeta "posts" y "react-app"
 
+## Preparar base de datos
 
-## Available Scripts
+con postgres sql, usamos el buscador para usar SQLshell(psql)
+ingresamos a la cuenta base de usuario y creamos la base de datos con el siguiente script
+    
+    CREATE DATABASE allPosts;
 
-In the project directory, you can run:
+Terminamos la conexion, y ingresamos una nueva, pero cuando pida seleccionar la base de datos, usaremos "allposts"
 
-### `npm start`
+para terminar, ingresamos el script para crear la tabla a utilizar.
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+    CREATE TABLE posts(id varchar(8) PRIMARY KEY, name varchar(50), description text);
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+con esto queda lista la base de datos y puede ser monitoreada por pgAdmin
 
-### `npm test`
+## correr servicios
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+    Abrimos una terminal para la carpeta posts y carpeta react-app, primero ejecutamos npm start en la terminal de posts
+    y despues en la terminal de react-app.
 
-### `npm run build`
-
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
-
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
-
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
-
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
+    con esto ya deberia abrir el navegador con la app y deberia ser usable, revisar que los cambios sucedan en pgAdmin tambien.
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
